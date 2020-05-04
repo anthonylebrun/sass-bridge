@@ -20,7 +20,7 @@ WRITE EXAMPLE WITH SASS LOADER HERE
 
 ## Sass to JavaScript Types
 
-Some types are similar between Sass and JavaScript, and type conversion for the following is automatic:
+Some types are similar between Sass and JavaScript, and type conversion for the following types are automatic:
 
 ### Booleans
 Sass booleans will convert to JS booleans
@@ -33,13 +33,13 @@ Sass lists will convert to JS arrays
 
 ---
 
-Some types don't quite map 1-1 or have edge cases / limitations that you need to be aware of. 
+Other types don't quite map 1-1 or have edge cases / limitations that you need to be aware of:
 
 ### Maps
-Sass maps will convert to a something with a[Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-like interface rather than a plain object. You will need to use the `myMap.get('key')` and `myMap.set('key', value)` methods to change manipulate this object.
+Sass maps will convert to a something with a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-like interface rather than a plain object. You will need to use the `myMap.get('key')` and `myMap.set('key', value)` methods to manipulate this object.
 
 ### Numbers
-Sass numbers don't map 1-1 to JS numbers because in Sass/CSS there is the concept of unit (px, rem, em, fr, etc.). Numbers are represented in a JSON format. For example, `10px` would be converted to:
+Sass numbers don't map 1-1 to JS numbers because CSS has units (px, rem, em, fr, etc.). Numbers are therefore represented as an special object. For example, `10px` would be converted to:
 
 ```js
 {
@@ -50,7 +50,7 @@ Sass numbers don't map 1-1 to JS numbers because in Sass/CSS there is the concep
 ```
 
 ### Colors
-Sass colors, whether they were specified in hex, rgb, hsl, etc. format in your Sass code, will be returned as an JSON formatted RGBA object. So `#ffffff` would be converted to:
+Sass colors, whether they were specified in hex, rgb, hsl, etc. format in your Sass code, will be returned as an RGBA object. So `#ffffff` would be converted to:
 
 ```js
 {
