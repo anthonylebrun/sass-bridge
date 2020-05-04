@@ -63,4 +63,4 @@ Sass colors, whether they were specified in hex, rgb, hsl, etc. format in your S
 
 ## JavaScript to Sass Types
 
-As far I as I know, this just works. Values like '#fefefe' and '12px' are valid and SaasBridge will infer that you meant a color and number with a pixel unit. The [Special Types](#special-types) listed above will also convert back to their respective sass types. Please submit an issue if you encounter any problems with this or need some clarification.
+As far I as I know, this just works. Values like '#fefefe' and '12px' are valid and SaasBridge will infer that you meant a color and number with a pixel unit. The special object representations of Sass types listed above (Maps, Numbers, Colors) will also convert back to their respective sass types. Please submit an issue if you encounter any problems with this or need some clarification.
