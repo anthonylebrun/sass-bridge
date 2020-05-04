@@ -20,27 +20,25 @@ WRITE EXAMPLE WITH SASS LOADER HERE
 
 ## Sass -> JavaScript Type Casting
 
-### Transparent types
-
 Some types are similar between Sass and JavaScript, and type conversion for the following is automatic:
 
-#### Booleans
+### Booleans
 Sass booleans will convert to JS booleans
 
-#### Strings
+### Strings
 Sass strings will convert to JS strings
 
-#### Lists
+### Lists
 Sass lists will convert to JS arrays
 
-### Special types
+---
 
 Some types don't quite map 1-1 or have edge cases / limitations that you need to be aware of. 
 
-#### Maps
+### Maps
 Sass maps will convert to a something with a[Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-like interface rather than a plain object. You will need to use the `myMap.get('key')` and `myMap.set('key', value)` methods to change manipulate this object.
 
-#### Numbers
+### Numbers
 Sass numbers don't map 1-1 to JS numbers because in Sass/CSS there is the concept of unit (px, rem, em, fr, etc.). Numbers are represented in a JSON format. For example, `10px` would be converted to:
 
 ```js
@@ -51,7 +49,7 @@ Sass numbers don't map 1-1 to JS numbers because in Sass/CSS there is the concep
 }
 ```
 
-#### Colors
+### Colors
 Sass colors, whether they were specified in hex, rgb, hsl, etc. format in your Sass code, will be returned as an JSON formatted RGBA object. So `#ffffff` would be converted to:
 
 ```js
