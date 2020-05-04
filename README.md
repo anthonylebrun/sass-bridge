@@ -18,7 +18,7 @@ And here's how it looks with SassBridge:
 WRITE EXAMPLE WITH SASS LOADER HERE
 ```
 
-## Sass -> JavaScript Type Casting
+## Sass to JavaScript Types
 
 Some types are similar between Sass and JavaScript, and type conversion for the following is automatic:
 
@@ -61,6 +61,6 @@ Sass colors, whether they were specified in hex, rgb, hsl, etc. format in your S
 }
 ```
 
-## JavaScript -> Sass Type Casting
+## JavaScript to Sass Types
 
 As far I as I know, this just works. Values like '#fefefe' and '12px' are valid and SaasBridge will infer that you meant a color and number with a pixel unit. The [Special Types](#special-types) listed above will also convert back to their respective sass types. Please submit an issue if you encounter any problems with this or need some clarification.
